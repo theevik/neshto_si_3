@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subs1: {fileID: 1011146656}
-  subs2: {fileID: 0}
+  subs2: {fileID: 171343769}
   aero: {fileID: 963985852}
   beta: {fileID: 1971936331}
   frost: {fileID: 179834645}
