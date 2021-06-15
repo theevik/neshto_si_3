@@ -25,7 +25,7 @@ public class talk5 : MonoBehaviour
 
         subs1.GetComponent<Text>().text = "Nog meer van deze mensen… Volgens mij gaan we de juiste kant op. Misschien hadden we een van hun meer kunnen vragen over deze “grote bezorging”.";
         subs2.GetComponent<Text>().text = "More of these guys…guess we’re going in the right direction. Maybe we should have asked one of them for some more details on this big delivery.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(8f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -34,7 +34,7 @@ public class talk5 : MonoBehaviour
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Dan moeten we het maar zelf uitvinden, als we deze kant op blijven gaan dan komen we ooit wel bij Batka.";
         subs2.GetComponent<Text>().text = "Better to go see for ourselves, if we keep going in the direction these guys came from, we should run into Batka eventually.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
 
         aero.SetActive(false);
         beta.SetActive(true);   
