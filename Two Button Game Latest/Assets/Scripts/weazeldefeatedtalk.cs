@@ -22,7 +22,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         weazel.SetActive(false);
 
         subs1.GetComponent<Text>().text = "Genoeg gespeeld, tijd om wat vragen te beantwoorden.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -30,7 +30,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "Ik ken jou… Jij werkt voor die eikel Gimbo!";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.8f);
 
         aero.SetActive(false);
         beta.SetActive(true);
@@ -38,7 +38,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Hey, houd de baas zijn naam uit je mond!!";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.7f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -46,7 +46,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "Wat moeten jullie met mij, zijn jullie niet op zoek naar hem?";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.2f);
 
 
         aero.SetActive(false);
@@ -55,7 +55,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(true);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Luister, vertel ons wat je weet over Gimbo’s verdwijning.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.2f);
 
 
         aero.SetActive(false);
@@ -64,7 +64,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "En waarom denk je dat ik daar iets over zou zeggen? Wat heb ik eraan?";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.8f);
 
 
         aero.SetActive(false);
@@ -73,7 +73,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Dan mag je je andere hand houden... ";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.5f);
 
 
         aero.SetActive(false);
@@ -82,7 +82,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "Kijk, ik heb geen idee wie hier bij betrokken is, veel mensen will Gimbo vermoorden in deze stad.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5.3f);
 
 
         aero.SetActive(false);
@@ -91,7 +91,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "Hoe weten jullie zo zeker dat hij niet al aan het rotten is in een goot?";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4.5f);
 
 
         aero.SetActive(false);
@@ -109,7 +109,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Kom op Weazel, jij en je maatjes zijn altijd aan het rondhangen in de bar, je moet toch wel iets gehoord hebben. ";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(6f);
 
 
         aero.SetActive(false);
@@ -118,7 +118,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "Nu je het zegt, een van Batka’s mannen hadden het over een “grote bezorging” ergens later vanavond.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(6f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -126,7 +126,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Wat voor bezorging?";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.5f);
 
 
         aero.SetActive(false);
@@ -135,7 +135,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "Eerst dacht ik dat het weer over die drugs ging die ze aan het maken zijn, maar een m’n maten...";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -143,7 +143,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "...vertelde me dan hij er meerdere zag rondhangen in een verlaten metrostation niet ver van hier.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -151,7 +151,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "Lijkt erop dat ze een trein gebruiken, rare drugs bezorging als je het mij vraagt.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
 
         aero.SetActive(true);
         beta.SetActive(false);
@@ -159,7 +159,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Klinkt alsof het het waar is om een kijkje te nemen, wat zeggen jullie?";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.5f);
 
         aero.SetActive(false);
         beta.SetActive(false);
