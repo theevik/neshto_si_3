@@ -167,7 +167,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(true);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Tis beter dan niks, ergste wat er kan gebeuren is dat we meer informatie uit hun slaan.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4.2f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -175,7 +175,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Ik weet waar het is, volg mij. ";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.5f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -183,7 +183,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "Wat dachten jullie van wat financiele compensatie, voor de informatie weetjewel?";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4.5f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -191,7 +191,7 @@ public class weazeldefeatedtalk : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Ik dacht dat we het al eens  waren dat je je arm mocht houden.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4.5f);
 
         aero.SetActive(false);
         beta.SetActive(false);
