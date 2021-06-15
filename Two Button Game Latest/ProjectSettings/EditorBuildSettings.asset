@@ -27,9 +27,12 @@ EditorBuildSettings:
     path: Assets/Scenes/4.2 Dialogue.unity
     guid: b44de181665585742836f2642b1638f7
   - enabled: 1
+    path: Assets/Scenes/Batlle 3.unity
+    guid: 1c8a13af5161cb14c9d24277c50200f2
+  - enabled: 1
     path: Assets/Scenes/5 Dialogue.unity
     guid: 88fe85fcbe328784a814a08838992b9b
-  - enabled: 1
-    path: Assets/Scenes/Battle4 (Boss).unity
-    guid: 62a36c602cc5a574fbfa9861e300a9a6
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
