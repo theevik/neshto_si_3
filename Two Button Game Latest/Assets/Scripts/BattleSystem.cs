@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// pls work
+
 //the battle state are the turns of the game. This is what makes this game's combat turn-based
 public enum BattleState {START, PLAYERTURN, ENEMYTURN, WON, LOST }
 

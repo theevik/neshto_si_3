@@ -20,7 +20,7 @@ public class Cooldowns : MonoBehaviour
     {
          Attack1();
     }
-
+    // toz kod za nikuv chep ne stava------------------------------------------------------
     void Attack1()
     {
         if(Input.GetKey(Cooldown1) && isCooldown == false)
