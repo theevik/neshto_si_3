@@ -23,7 +23,7 @@ public class subwaytalk : MonoBehaviour
         weazel.SetActive(false);
 
         subs1.GetComponent<Text>().text = "Weten jullie zeker dat we Weazel kunnen vetrouwen, dit ziet er... verdacht uit.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
 
         aero.SetActive(true);
         beta.SetActive(false);
