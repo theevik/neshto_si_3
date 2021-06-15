@@ -23,7 +23,7 @@ public class dialogue6_1 : MonoBehaviour
         weazel.SetActive(true);
 
         subs1.GetComponent<Text>().text = "Kijk, kijk, kijk, als dat Gimbo’s kleine helpertjes niet zijn. Laat jullie treinkaartjes maar zien voordat jullie dichterbij komen.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(9f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -31,7 +31,7 @@ public class dialogue6_1 : MonoBehaviour
         naiden.SetActive(true);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Jij eikel… Waar is gimbo... ";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         aero.SetActive(false);
         beta.SetActive(false);
@@ -39,7 +39,7 @@ public class dialogue6_1 : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = " Volgens mij hebben jullie hem net gemist! ";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         aero.SetActive(true);
         beta.SetActive(false);
@@ -47,7 +47,7 @@ public class dialogue6_1 : MonoBehaviour
         naiden.SetActive(false);
         weazel.SetActive(false);
         subs1.GetComponent<Text>().text = "Vertel ons onmiddelijk waar die trein naartoe gaat. ";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.3f);
 
 
         aero.SetActive(false);
