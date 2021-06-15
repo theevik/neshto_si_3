@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: batka_sprite_idle_0
+  m_Name: batka_sprite_idle (1)_0
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers: []
