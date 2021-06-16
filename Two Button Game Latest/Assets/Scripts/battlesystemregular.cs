@@ -84,6 +84,8 @@ public class battlesystemregular : MonoBehaviour
     public int frozen = 0;
     public int armor;
 
+    public GameObject armortext;
+
     float crit;
 
     //sprites--------------------
