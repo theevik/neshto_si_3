@@ -3574,7 +3574,7 @@ MonoBehaviour:
   playerPrefab1: {fileID: 2035816349}
   playerPrefab2: {fileID: 877077612}
   playerPrefab3: {fileID: 1000869036}
-  enemyPrefab: {fileID: 7347982318951155393, guid: 34ff5ec58f6e81f4f9d380001dd31e85,
+  enemyPrefab: {fileID: 4747767801675724364, guid: d3a58483f29c6534e81881d9745f3249,
     type: 3}
   dialogueText: {fileID: 1587013177}
   subs1: {fileID: 0}
@@ -5295,7 +5295,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 221f22af2206d5245a5d008a544a3d3b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.37
+      value: -2.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 221f22af2206d5245a5d008a544a3d3b,
         type: 3}
