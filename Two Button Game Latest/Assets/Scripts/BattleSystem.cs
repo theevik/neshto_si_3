@@ -1053,16 +1053,19 @@ public class BattleSystem : MonoBehaviour
         
     }
     
-    void EndBattle()
+    IEnumerator EndBattle()
     {
         if (state == BattleState.WON)
         {
             dialogueText.text = "YOU WON";
+            yield return new WaitForSeconds(2f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else if (state == BattleState.LOST)
             {
             dialogueText.text = "YOU LOST";
+            yield return new WaitForSeconds(2f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
       void PlayerTurn()

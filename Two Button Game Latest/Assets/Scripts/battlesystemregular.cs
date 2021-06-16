@@ -2103,9 +2103,11 @@ public class battlesystemregular : MonoBehaviour
         else if (state == BattleState.LOST)
         {
             dialogueText.text = "YOU LOST";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
-    void PlayerTurn()
+        
+        void PlayerTurn()
     {
         dialogueText.text = "YOUR TURN";
         ActionsMenu.SetActive(true);
