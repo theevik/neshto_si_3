@@ -41,6 +41,8 @@ public class battlesystemregular : MonoBehaviour
     Unit1 enemy1Unit;
     Unit2 enemy2Unit;
 
+    public GameObject shtitche;
+
     //refers to the battle hud scripts (with them we transfer the character/enemy stats to their huds)
 
     public BattleHUD playerHUD;
@@ -92,6 +94,14 @@ public class battlesystemregular : MonoBehaviour
 
     public Sprite frostidle;
     public Sprite frostattack;
+
+    public Animator aeroshot;
+    public Animator naidenshot;
+    public Animator betashott;
+    public Animator frostshot;
+
+    public Animator enemyshot;
+    public Animator naidenspecial;
 
     // Start is called before the first frame update
     void Start()
@@ -164,6 +174,16 @@ public class battlesystemregular : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
+        aeroshot.SetBool("aeroshot", true);
+        betashott.SetBool("betashot", true);
+        naidenshot.SetBool("naidenshot", true);
+        frostshot.SetBool("frostshot", true);
+        yield return new WaitForSeconds(1);
+        aeroshot.SetBool("aeroshot", false);
+        betashott.SetBool("betashot", false);
+        naidenshot.SetBool("naidenshot", false);
+        frostshot.SetBool("frostshot", false);
+
         crit = Random.Range(1.0f, 100.0f);
 
 
@@ -703,6 +723,24 @@ public class battlesystemregular : MonoBehaviour
 
     IEnumerator Ultimate()
     {
+
+        aeroshot.SetBool("aeroshot", true);
+
+        naidenspecial.SetBool("naidenspecial", true);
+        frostshot.SetBool("frostshot", true);
+
+        yield return new WaitForSeconds(2);
+
+        aeroshot.SetBool("aeroshot", false);
+
+        naidenspecial.SetBool("naidenspecial", false);
+        frostshot.SetBool("frostshot", false);
+
+        aeroshot.SetBool("aeroshot", true);
+        yield return new WaitForSeconds(1);
+        aeroshot.SetBool("aeroshot", false);
+
+
         yield return new WaitForSeconds(1f);
         crit = Random.Range(1.0f, 100.0f);
 
@@ -995,6 +1033,17 @@ public class battlesystemregular : MonoBehaviour
 
     IEnumerator HeavyAttack()
     {
+
+        aeroshot.SetBool("aeroshot", true);
+        betashott.SetBool("betashot", true);
+        naidenshot.SetBool("naidenshot", true);
+        frostshot.SetBool("frostshot", true);
+        yield return new WaitForSeconds(1);
+        aeroshot.SetBool("aeroshot", false);
+        betashott.SetBool("betashot", false);
+        naidenshot.SetBool("naidenshot", false);
+        frostshot.SetBool("frostshot", false);
+
         crit = Random.Range(1.0f, 100.0f);
 
         if (enState == Enemystate.Thug1)
@@ -1534,7 +1583,10 @@ public class battlesystemregular : MonoBehaviour
         
         this.playerPrefab3.GetComponent<SpriteRenderer>().sprite = frostidle;
 
-       
+        enemyshot.SetBool("enemyshot", true);
+        dialogueText.text = "Enemy Is Attacking";
+        yield return new WaitForSeconds(1f);
+        enemyshot.SetBool("enemyshot", false);
 
         //enemy heals once when under 60 health
 
@@ -1549,7 +1601,7 @@ public class battlesystemregular : MonoBehaviour
         if (enemyUnit.currentHP <= 30 && enState == Enemystate.Thug1 && enemyswitches > 0)
         {
             switchtext.SetActive(true);
-            yield return new WaitForSeconds(2f);
+           
             enState = Enemystate.Thug2;
             enemyswitches = enemyswitches - 1;
             switchtext.SetActive(false);
@@ -1559,7 +1611,7 @@ public class battlesystemregular : MonoBehaviour
         if (enemy1Unit.currentHP <= 30 && enState == Enemystate.Thug2 && enemyswitches > 0)
         {
             switchtext.SetActive(true);
-            yield return new WaitForSeconds(2f);
+            
             enState = Enemystate.Thug3;
             enemyswitches = enemyswitches - 1;
             switchtext.SetActive(false);
@@ -1568,7 +1620,7 @@ public class battlesystemregular : MonoBehaviour
         if (enemy2Unit.currentHP <= 30 && enState == Enemystate.Thug3 && enemyswitches > 0)
         {
             switchtext.SetActive(true);
-            yield return new WaitForSeconds(2f);
+            
             enState = Enemystate.Thug1;
             enemyswitches = enemyswitches - 1;
             switchtext.SetActive(false);
@@ -1584,7 +1636,7 @@ public class battlesystemregular : MonoBehaviour
         if (enemyUnit.currentHP <= 0 && enState == Enemystate.Thug1)
         {
             switchtext.SetActive(true);
-            yield return new WaitForSeconds(2f);
+           
             enState = Enemystate.Thug2;
             switchtext.SetActive(false);
         }
@@ -1592,7 +1644,7 @@ public class battlesystemregular : MonoBehaviour
         else if (enemyUnit.currentHP <= 0 && enemy1Unit.currentHP <= 0 && enState == Enemystate.Thug1)
         {
             switchtext.SetActive(true);
-            yield return new WaitForSeconds(2f);
+           
             enState = Enemystate.Thug3;
             switchtext.SetActive(false);
         }
@@ -1600,7 +1652,7 @@ public class battlesystemregular : MonoBehaviour
         else if (enemy1Unit.currentHP <= 0 && enState == Enemystate.Thug2)
         {
             switchtext.SetActive(true);
-            yield return new WaitForSeconds(2f);
+            
             enState = Enemystate.Thug3;
             switchtext.SetActive(false);
         }
@@ -1608,7 +1660,7 @@ public class battlesystemregular : MonoBehaviour
         else if (enemy1Unit.currentHP <= 0 && enemy2Unit.currentHP <= 0 && enState == Enemystate.Thug2)
         {
             switchtext.SetActive(true);
-            yield return new WaitForSeconds(2f);
+           
             enState = Enemystate.Thug1;
             switchtext.SetActive(false);
         }
@@ -1616,7 +1668,7 @@ public class battlesystemregular : MonoBehaviour
         else if (enemy2Unit.currentHP <= 0 && enState == Enemystate.Thug3)
         {
             switchtext.SetActive(true);
-            yield return new WaitForSeconds(2f);
+            
             enState = Enemystate.Thug1;
             switchtext.SetActive(false);
         }
@@ -1624,7 +1676,7 @@ public class battlesystemregular : MonoBehaviour
         else if (enemy2Unit.currentHP <= 0 && enemyUnit.currentHP <= 0 && enState == Enemystate.Thug3)
         {
             switchtext.SetActive(true);
-            yield return new WaitForSeconds(2f);
+            
             enState = Enemystate.Thug2;
             switchtext.SetActive(false);
         }
@@ -1651,7 +1703,7 @@ public class battlesystemregular : MonoBehaviour
                 ActionsMenu.SetActive(false);
 
 
-                yield return new WaitForSeconds(2f);
+                
 
 
                 changeAbility = 1;
@@ -1686,7 +1738,7 @@ public class battlesystemregular : MonoBehaviour
                 {
                     dialogueText.text = "Enemy Is Attacking";
 
-                    yield return new WaitForSeconds(2f);
+                    
 
 
 
@@ -1700,7 +1752,7 @@ public class battlesystemregular : MonoBehaviour
 
                             playerHUD.SetHP(playerUnit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
+                           
 
                             if (isDead)
                             {
@@ -1722,7 +1774,7 @@ public class battlesystemregular : MonoBehaviour
 
                             playerHUD.SetHP(playerUnit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
+                            
 
                             if (isDead)
                             {
@@ -1749,8 +1801,7 @@ public class battlesystemregular : MonoBehaviour
 
                             playerHUD.SetHP(playerUnit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
-
+                           
                             if (isDead)
                             {
                                 state = BattleState.LOST;
@@ -1771,7 +1822,7 @@ public class battlesystemregular : MonoBehaviour
 
                             playerHUD.SetHP(playerUnit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
+                            
 
                             if (isDead)
                             {
@@ -1792,7 +1843,7 @@ public class battlesystemregular : MonoBehaviour
                 {
                     dialogueText.text = "Enemy Is Attacking";
 
-                    yield return new WaitForSeconds(2f);
+                    
 
 
 
@@ -1804,7 +1855,7 @@ public class battlesystemregular : MonoBehaviour
 
                             player1HUD.SetHP1(player1Unit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
+                           
 
                             if (isDead)
                             {
@@ -1823,7 +1874,7 @@ public class battlesystemregular : MonoBehaviour
 
                             player1HUD.SetHP1(player1Unit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
+                            
 
                             if (isDead)
                             {
@@ -1847,7 +1898,7 @@ public class battlesystemregular : MonoBehaviour
 
                             player1HUD.SetHP1(player1Unit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
+                           
 
                             if (isDead)
                             {
@@ -1867,8 +1918,7 @@ public class battlesystemregular : MonoBehaviour
 
                             player1HUD.SetHP1(player1Unit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
-
+                           
                             if (isDead)
                             {
                                 state = BattleState.LOST;
@@ -1887,9 +1937,7 @@ public class battlesystemregular : MonoBehaviour
                 {
                     dialogueText.text = "Enemy Is Attacking";
 
-                    yield return new WaitForSeconds(2f);
-
-
+                    
 
                     if (armor <= 0)
                     {
@@ -1900,8 +1948,7 @@ public class battlesystemregular : MonoBehaviour
 
                             player2HUD.SetHP2(player2Unit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
-
+                           
                             if (isDead)
                             {
                                 state = BattleState.LOST;
@@ -1919,8 +1966,7 @@ public class battlesystemregular : MonoBehaviour
 
                             player2HUD.SetHP2(player2Unit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
-
+                           
                             if (isDead)
                             {
                                 state = BattleState.LOST;
@@ -1943,8 +1989,6 @@ public class battlesystemregular : MonoBehaviour
 
                             player2HUD.SetHP2(player2Unit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
-
                             if (isDead)
                             {
                                 state = BattleState.LOST;
@@ -1962,8 +2006,7 @@ public class battlesystemregular : MonoBehaviour
 
                             player2HUD.SetHP2(player2Unit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
-
+                          
                             if (isDead)
                             {
                                 state = BattleState.LOST;
@@ -1982,9 +2025,7 @@ public class battlesystemregular : MonoBehaviour
                 {
                     dialogueText.text = "Enemy Is Attacking";
 
-                    yield return new WaitForSeconds(2f);
-
-
+                   
 
                     if (armor <= 0)
                     {
@@ -1995,8 +2036,7 @@ public class battlesystemregular : MonoBehaviour
 
                             player3HUD.SetHP3(player3Unit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
-
+                           
                             if (isDead)
                             {
                                 state = BattleState.LOST;
@@ -2014,8 +2054,7 @@ public class battlesystemregular : MonoBehaviour
 
                             player3HUD.SetHP3(player3Unit.currentHP);
 
-                            yield return new WaitForSeconds(1f);
-
+                           
                             if (isDead)
                             {
                                 state = BattleState.LOST;
@@ -2039,8 +2078,7 @@ public class battlesystemregular : MonoBehaviour
 
                         player3HUD.SetHP3(player3Unit.currentHP);
 
-                        yield return new WaitForSeconds(1f);
-
+                       
                         if (isDead)
                         {
                             state = BattleState.LOST;
@@ -2058,8 +2096,7 @@ public class battlesystemregular : MonoBehaviour
 
                         player3HUD.SetHP3(player3Unit.currentHP);
 
-                        yield return new WaitForSeconds(1f);
-
+                       
                         if (isDead)
                         {
                             state = BattleState.LOST;
@@ -2126,6 +2163,21 @@ public class battlesystemregular : MonoBehaviour
 
     void Update()
     {
+
+
+        if (armor > 0)
+        {
+            shtitche.SetActive(true);
+        }
+        else
+        {
+            shtitche.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            SceneManager.LoadScene(0);
+        }
 
         if (enState == Enemystate.Thug1)
         {

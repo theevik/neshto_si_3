@@ -30,7 +30,7 @@ public class BattleSystem : MonoBehaviour
 
     public Text dialogueText;
 
-    public GameObject subs1;
+    public GameObject shtitche;
 
     //refers to the unit scripts (we need them to give stats to each character/enemy)
 
@@ -80,7 +80,14 @@ public class BattleSystem : MonoBehaviour
 
     float crit;
 
-    
+    public Animator aeroshot;
+    public Animator naidenshot;
+    public Animator betashott;
+    public Animator frostshot;
+    public Animator batkashot;
+    public Animator naidenspecial;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -94,17 +101,7 @@ public class BattleSystem : MonoBehaviour
 
     //this is the initial state of the game, spawns the characters that will participate in the battle.
 
-    IEnumerator SubSequence1()
-    {
-        subs1.GetComponent<Text>().text = "yadayadayada";
-        yield return new WaitForSeconds(2f);
-        subs1.GetComponent<Text>().text = "fsasafsafsaffsasafsafsaffsasafsafsaffsasafsafsaffsasafsafsaf";
-        yield return new WaitForSeconds(2f);
-        subs1.GetComponent<Text>().text = "mdsamfmsagiagisafjisajgiasgjisa";
-        yield return new WaitForSeconds(2f);
-        subs1.GetComponent<Text>().text = "fjfkfksakfkffasdgggggasfccas";
-        
-    }
+  
    IEnumerator SetupBattle()
     {
         
@@ -128,7 +125,7 @@ public class BattleSystem : MonoBehaviour
         GameObject player3GO = playerPrefab3;
         player3Unit = player3GO.GetComponent<Unit3>();
 
-        GameObject enemyGO = Instantiate(enemyPrefab);
+        GameObject enemyGO = enemyPrefab;
         enemyUnit = enemyGO.GetComponent<Unit>();
        
 
@@ -156,9 +153,25 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
+
+        aeroshot.SetBool("aeroshot", true);
+        betashott.SetBool("betashot", true);
+        naidenshot.SetBool("naidenshot", true);
+        frostshot.SetBool("frostshot", true);
+        yield return new WaitForSeconds(1);
+        aeroshot.SetBool("aeroshot", false);
+        betashott.SetBool("betashot", false);
+        naidenshot.SetBool("naidenshot", false);
+        frostshot.SetBool("frostshot", false);
+
+
         crit = Random.Range(1.0f, 100.0f);
 
-        
+        aeroshot.SetBool("aeroshot", true);
+        yield return new WaitForSeconds(1);
+        aeroshot.SetBool("aeroshot", false);
+
+
 
 
         if (charState == CharacterState.Aero)
@@ -329,6 +342,22 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator Ultimate()
     {
+        aeroshot.SetBool("aeroshot", true);
+        
+        naidenspecial.SetBool("naidenspecial", true);
+        frostshot.SetBool("frostshot", true);
+
+        yield return new WaitForSeconds(2);
+
+        aeroshot.SetBool("aeroshot", false);
+        
+        naidenspecial.SetBool("naidenspecial", false);
+        frostshot.SetBool("frostshot", false);
+
+        aeroshot.SetBool("aeroshot", true);
+        yield return new WaitForSeconds(1);
+        aeroshot.SetBool("aeroshot", false);
+
         crit = Random.Range(1.0f, 100.0f);
 
         if (charState == CharacterState.Aero)
@@ -423,6 +452,16 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator HeavyAttack()
     {
+
+        aeroshot.SetBool("aeroshot", true);
+        betashott.SetBool("betashot", true);
+        naidenshot.SetBool("naidenshot", true);
+        frostshot.SetBool("frostshot", true);
+        yield return new WaitForSeconds(1);
+        aeroshot.SetBool("aeroshot", false);
+        betashott.SetBool("betashot", false);
+        naidenshot.SetBool("naidenshot", false);
+        frostshot.SetBool("frostshot", false);
         crit = Random.Range(1.0f, 100.0f);
 
         if (charState == CharacterState.Aero)
@@ -596,9 +635,15 @@ public class BattleSystem : MonoBehaviour
     //the enemy turn, currently the enemy can simply just hit back, NEEDS WORK!!!!
     IEnumerator EnemyTurn()
     {
+        batkashot.SetBool("weazelshot", true);
+        batkashot.SetBool("batkashot", true);
+        yield return new WaitForSeconds(1f);
+        batkashot.SetBool("weazelshot", false);
+        batkashot.SetBool("batkashot", false);
+
         dialogueText.text = "Enemy Is Attacking";
 
-        yield return new WaitForSeconds(2f);
+        
         FindObjectOfType<audiomanager>().Play("Plasmabomb");
 
         crit = Random.Range(1.0f, 100.0f);
@@ -626,7 +671,7 @@ public class BattleSystem : MonoBehaviour
             ActionsMenu.SetActive(false);
 
 
-            yield return new WaitForSeconds(2f);
+           
 
 
             changeAbility = 1;
@@ -966,7 +1011,7 @@ public class BattleSystem : MonoBehaviour
 
                         player3HUD.SetHP3(player3Unit.currentHP);
 
-                        yield return new WaitForSeconds(1f);
+                        yield return new WaitForSeconds(0f);
 
                         if (isDead)
                         {
@@ -1087,7 +1132,20 @@ public class BattleSystem : MonoBehaviour
 
     void Update()
     {
-        
+
+        if (armor > 0)
+        {
+            shtitche.SetActive(true);
+        }
+        else
+        {
+            shtitche.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            SceneManager.LoadScene(0);
+        }
 
         timer = timer - Time.deltaTime;
         if (timer <= 0.0f)
