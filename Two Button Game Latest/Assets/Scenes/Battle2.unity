@@ -4218,6 +4218,7 @@ MonoBehaviour:
   enemylives: 3
   frozen: 0
   armor: 0
+  armortext: {fileID: 0}
   frostidle: {fileID: 21300000, guid: 9b6d6754fac2b1b488b9e849190bc651, type: 3}
   frostattack: {fileID: 21300000, guid: 977e1ce615460644db42ebb3a4b189e1, type: 3}
 --- !u!4 &575033212
@@ -7149,7 +7150,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 381ef0642acc0604b9b48b35e9171d62,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.16
+      value: -4.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 381ef0642acc0604b9b48b35e9171d62,
         type: 3}
