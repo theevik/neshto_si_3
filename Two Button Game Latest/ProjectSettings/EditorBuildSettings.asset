@@ -12,27 +12,33 @@ EditorBuildSettings:
     path: Assets/Scenes/Battle1 (Tutorial).unity
     guid: 408341b137d866a42a90140b7ae84834
   - enabled: 1
-    path: Assets/Scenes/Weazel Defeated.unity
+    path: Assets/Scenes/Done 2.unity
     guid: f281238d04bd295408e8177c76192d76
   - enabled: 1
-    path: Assets/Scenes/EnterSubwayTalk.unity
-    guid: f939ccda17e37bb47bfbc27fdc73b8a2
-  - enabled: 1
-    path: Assets/Scenes/Battle2 (first normal battle).unity
+    path: Assets/Scenes/done 3.unity
     guid: 6e2ef081e0381604a9818401f89b4b15
   - enabled: 1
-    path: Assets/Scenes/AfterFirstTHugBattle.unity
-    guid: e0ff74194edc7d249980eb2ba5690872
+    path: Assets/Scenes/Battle2.unity
+    guid: 8c79bed9d898e7f48b172489cd9f45ad
   - enabled: 1
-    path: Assets/Scenes/4.2 Dialogue.unity
-    guid: b44de181665585742836f2642b1638f7
+    path: Assets/Scenes/done 4.1.unity
+    guid: 06eea8de06c97da4e971ad135adc0eb1
+  - enabled: 1
+    path: Assets/Scenes/Done 4.2.unity
+    guid: db661bcca54de4049b4a9c3d6cb34bf0
   - enabled: 1
     path: Assets/Scenes/Batlle 3.unity
     guid: 1c8a13af5161cb14c9d24277c50200f2
   - enabled: 1
-    path: Assets/Scenes/5 Dialogue.unity
-    guid: 88fe85fcbe328784a814a08838992b9b
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/Done 5.unity
+    guid: 39a450e2796be834ab72d61e729b3c0e
+  - enabled: 1
+    path: Assets/Scenes/Done 6.1.unity
+    guid: b303588c44f3fd84d96ccfbb1d1926d0
+  - enabled: 1
+    path: Assets/Scenes/Battle4 (Boss).unity
+    guid: 5cedcb632190bfd44b9278e25069d8b5
+  - enabled: 1
+    path: Assets/Scenes/Done 6.2.unity
+    guid: 3452932e561998d45ad596018642add9
   m_configObjects: {}
