@@ -3046,7 +3046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b5113a56ba54dc4f92933ba1bcba659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: 
+  unitName: Thug 3
   unitLevel: 0
   damage: 16
   heavydamage: 35
@@ -4218,6 +4218,7 @@ MonoBehaviour:
   enemylives: 3
   frozen: 0
   armor: 0
+  armortext: {fileID: 0}
   frostidle: {fileID: 21300000, guid: 9b6d6754fac2b1b488b9e849190bc651, type: 3}
   frostattack: {fileID: 21300000, guid: 977e1ce615460644db42ebb3a4b189e1, type: 3}
 --- !u!4 &575033212
