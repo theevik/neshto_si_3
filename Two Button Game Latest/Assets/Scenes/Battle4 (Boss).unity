@@ -2766,14 +2766,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Aero
   unitLevel: 0
-  damage: 16
-  heavydamage: 35
-  maxHP: 100
-  currentHP: 100
+  damage: 50
+  heavydamage: 70
+  maxHP: 150
+  currentHP: 150
   healing: 0
   maxMana: 100
   mana: 100
-  losemana: 33
+  losemana: 25
   gainmana: 10
 --- !u!136 &450938649
 CapsuleCollider:
@@ -4679,14 +4679,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Beta
   unitLevel: 0
-  damage: 10
-  heavydamage: 40
-  maxHP: 55
-  currentHP: 55
-  healing: 30
+  damage: 40
+  heavydamage: 50
+  maxHP: 120
+  currentHP: 120
+  healing: 50
   maxMana: 100
   mana: 100
-  losemana: 33
+  losemana: 30
   gainmana: 10
 --- !u!212 &877077614
 SpriteRenderer:
@@ -8169,14 +8169,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Frost
   unitLevel: 0
-  damage: 20
-  heavydamage: 45
-  maxHP: 80
-  currentHP: 80
+  damage: 50
+  heavydamage: 60
+  maxHP: 150
+  currentHP: 150
   healing: 0
   maxMana: 100
   mana: 100
-  losemana: 33
+  losemana: 25
   gainmana: 10
 --- !u!136 &1000869038
 CapsuleCollider:
@@ -14026,14 +14026,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Naiden
   unitLevel: 0
-  damage: 14
-  heavydamage: 30
-  maxHP: 120
-  currentHP: 120
+  damage: 45
+  heavydamage: 60
+  maxHP: 200
+  currentHP: 200
   healing: 0
   maxMana: 100
   mana: 100
-  losemana: 33
+  losemana: 25
   gainmana: 10
 --- !u!1 &2041244285
 GameObject:
