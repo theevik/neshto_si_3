@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Battle1 (Tutorial).unity
     guid: 408341b137d866a42a90140b7ae84834
   - enabled: 1
-    path: Assets/Scenes/Weazel Defeated.unity
+    path: Assets/Scenes/Done 2.unity
     guid: f281238d04bd295408e8177c76192d76
   - enabled: 1
     path: Assets/Scenes/EnterSubwayTalk.unity
     guid: f939ccda17e37bb47bfbc27fdc73b8a2
   - enabled: 1
-    path: Assets/Scenes/Battle2 (first normal battle).unity
+    path: Assets/Scenes/done 3.unity
     guid: 6e2ef081e0381604a9818401f89b4b15
   - enabled: 1
     path: Assets/Scenes/AfterFirstTHugBattle.unity
