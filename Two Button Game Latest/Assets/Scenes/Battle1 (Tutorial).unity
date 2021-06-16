@@ -2950,14 +2950,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Aero
   unitLevel: 0
-  damage: 16
-  heavydamage: 30
-  maxHP: 100
-  currentHP: 100
+  damage: 60
+  heavydamage: 80
+  maxHP: 120
+  currentHP: 120
   healing: 0
   maxMana: 100
   mana: 100
-  losemana: 33
+  losemana: 25
   gainmana: 10
 --- !u!136 &450938649
 CapsuleCollider:
@@ -4516,14 +4516,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Betta
   unitLevel: 0
-  damage: 10
+  damage: 30
   heavydamage: 40
-  maxHP: 55
-  currentHP: 55
-  healing: 30
+  maxHP: 100
+  currentHP: 100
+  healing: 50
   maxMana: 100
   mana: 100
-  losemana: 33
+  losemana: 30
   gainmana: 10
 --- !u!212 &877077614
 SpriteRenderer:
@@ -5317,14 +5317,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Frost
   unitLevel: 0
-  damage: 20
-  heavydamage: 45
-  maxHP: 80
-  currentHP: 80
+  damage: 50
+  heavydamage: 60
+  maxHP: 150
+  currentHP: 150
   healing: 0
   maxMana: 100
   mana: 100
-  losemana: 33
+  losemana: 25
   gainmana: 10
 --- !u!136 &1000869038
 CapsuleCollider:
@@ -9781,7 +9781,17 @@ PrefabInstance:
     - target: {fileID: 8831140121158479167, guid: b0e3c487c56bd9b43812c799d2b159d1,
         type: 3}
       propertyPath: currentHP
-      value: 100
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831140121158479167, guid: b0e3c487c56bd9b43812c799d2b159d1,
+        type: 3}
+      propertyPath: maxHP
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831140121158479167, guid: b0e3c487c56bd9b43812c799d2b159d1,
+        type: 3}
+      propertyPath: damage
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0e3c487c56bd9b43812c799d2b159d1, type: 3}
@@ -12762,14 +12772,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Naiden
   unitLevel: 0
-  damage: 14
-  heavydamage: 30
-  maxHP: 120
-  currentHP: 120
+  damage: 45
+  heavydamage: 60
+  maxHP: 180
+  currentHP: 180
   healing: 0
   maxMana: 100
   mana: 100
-  losemana: 33
+  losemana: 25
   gainmana: 10
 --- !u!1 &2041244285
 GameObject:
