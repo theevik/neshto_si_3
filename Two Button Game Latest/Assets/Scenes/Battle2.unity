@@ -1258,8 +1258,8 @@ MonoBehaviour:
   unitLevel: 0
   damage: 16
   heavydamage: 30
-  maxHP: 100
-  currentHP: 100
+  maxHP: 115
+  currentHP: 115
   healing: 0
   maxMana: 1000
   mana: 1000
@@ -3050,8 +3050,8 @@ MonoBehaviour:
   unitLevel: 0
   damage: 16
   heavydamage: 35
-  maxHP: 100
-  currentHP: 100
+  maxHP: 115
+  currentHP: 115
   healing: 0
   maxMana: 1000
   mana: 1000
@@ -4114,6 +4114,7 @@ MonoBehaviour:
   player2HUD: {fileID: 276770105}
   player3HUD: {fileID: 1130895770}
   enemyHUD: {fileID: 874344269}
+  enemyname: {fileID: 1176335145}
   SelectionIndicator: {fileID: 2056910674}
   ChangeFromAeroIndicator: {fileID: 1068548298}
   ChangeFromNaidenIndicator: {fileID: 171149073}
@@ -5974,8 +5975,8 @@ MonoBehaviour:
   unitLevel: 0
   damage: 16
   heavydamage: 35
-  maxHP: 100
-  currentHP: 100
+  maxHP: 115
+  currentHP: 115
   healing: 0
   maxMana: 1000
   mana: 1000

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //the battle state are the turns of the game. This is what makes this game's combat turn-based
 public enum BattleState1 { START, PLAYERTURN, ENEMYTURN, WON, LOST }
@@ -48,6 +49,7 @@ public class battlesystemregular : MonoBehaviour
     public BattleHUD3 player3HUD;
 
     public BattleHUD enemyHUD;
+    public GameObject enemyname;
 
     public GameObject SelectionIndicator;
     public GameObject ChangeFromAeroIndicator;
@@ -1528,6 +1530,8 @@ public class battlesystemregular : MonoBehaviour
         
         this.playerPrefab3.GetComponent<SpriteRenderer>().sprite = frostidle;
 
+       
+
         //enemy heals once when under 60 health
 
         if (enemyUnit.currentHP <= 60 && healAbility > 0)
@@ -2065,6 +2069,7 @@ public class battlesystemregular : MonoBehaviour
         if (state == BattleState.WON)
         {
             dialogueText.text = "YOU WON";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else if (state == BattleState.LOST)
         {
@@ -2090,6 +2095,22 @@ public class battlesystemregular : MonoBehaviour
 
     void Update()
     {
+
+        if (enState == Enemystate.Thug1)
+        {
+            enemyHUD.SetHP(enemyUnit.currentHP);
+            enemyname.GetComponent<Text>().text = "Thug 1 ";
+        }
+        else if (enState == Enemystate.Thug2)
+        {
+            enemyHUD.SetHP(enemy1Unit.currentHP);
+            enemyname.GetComponent<Text>().text = "Thug 2 ";
+        }
+        else if (enState == Enemystate.Thug3)
+        {
+            enemyHUD.SetHP(enemy2Unit.currentHP);
+            enemyname.GetComponent<Text>().text = "Thug 3 ";
+        }
 
 
         timer = timer - Time.deltaTime;
