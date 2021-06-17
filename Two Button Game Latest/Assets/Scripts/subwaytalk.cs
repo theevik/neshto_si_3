@@ -9,10 +9,13 @@ public class subwaytalk : MonoBehaviour
     public GameObject subs1;
     public GameObject subs2;
 
+    public GameObject enemypop;
+
     public GameObject aero, beta, frost, naiden, weazel;
 
     void Start()
     {
+        enemypop.SetActive(false);
         StartCoroutine(SubSequence1());
     }
     IEnumerator SubSequence1()
@@ -72,6 +75,8 @@ public class subwaytalk : MonoBehaviour
         weazel.SetActive(true);
         subs1.GetComponent<Text>().text = "HEY! Wat doen jullie hier? Ren maar snel weg nu het nog kan";
         subs2.GetComponent<Text>().text = "HEY! What are you bastards doing here, get lost while you still have the chance.";
+
+        enemypop.SetActive(true);
         yield return new WaitForSeconds(4.2f);
 
 

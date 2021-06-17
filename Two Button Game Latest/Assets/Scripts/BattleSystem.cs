@@ -402,7 +402,7 @@ public class BattleSystem : MonoBehaviour
 
         else if (charState == CharacterState.Frost)
         {
-            //FindObjectOfType<audiomanager>().Play("Freeze");
+            FindObjectOfType<audiomanager>().Play("Freeze");
 
             frozen = 1;
             changeAbility = 1;
