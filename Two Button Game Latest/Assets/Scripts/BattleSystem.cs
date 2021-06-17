@@ -96,6 +96,8 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.START;
         StartCoroutine(SetupBattle());
 
+        
+
     }
 
 
@@ -1133,6 +1135,14 @@ public class BattleSystem : MonoBehaviour
     void Update()
     {
 
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        playerHUD.SetHP(playerUnit.currentHP);
+        player1HUD.SetHP1(player1Unit.currentHP);
+        player2HUD.SetHP2(player2Unit.currentHP);
+        player3HUD.SetHP3(player3Unit.currentHP);
+        
+        enemyHUD.SetHP(enemyUnit.currentHP);
+
         if (armor > 0)
         {
             shtitche.SetActive(true);
@@ -1161,38 +1171,38 @@ public class BattleSystem : MonoBehaviour
 
         if (currentSelection == 0)
         {
-            SelectionIndicator.transform.localPosition = new Vector3(-100, 60, 0);
-            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-100, 60, 0);
-            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-100, 60, 0);
-            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-100, 60, 0);
-            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-100, 60, 0);
+            SelectionIndicator.transform.localPosition = new Vector3(-130, 60, 0);
+            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-130, 60, 0);
+            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-130, 60, 0);
+            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-130, 60, 0);
+            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-130, 60, 0);
         }
         if (currentSelection == 1)
         {
-            SelectionIndicator.transform.localPosition = new Vector3(-100, 20, 0);
-            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-100, 20, 0);
-            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-100, 20, 0);
-            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-100, 20, 0);
-            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-100, 20, 0);
+            SelectionIndicator.transform.localPosition = new Vector3(-130, 20, 0);
+            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-130, 20, 0);
+            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-130, 20, 0);
+            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-130, 20, 0);
+            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-130, 20, 0);
         }
         if (currentSelection == 2)
         {
-            SelectionIndicator.transform.localPosition = new Vector3(-100, -20, 0);
-            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-100, -20, 0);
-            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-100, -20, 0);
-            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-100, -20, 0);
-            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-100, -20, 0);
+            SelectionIndicator.transform.localPosition = new Vector3(-130, -20, 0);
+            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-130, -20, 0);
+            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-130, -20, 0);
+            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-130, -20, 0);
+            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-130, -20, 0);
         }
         if (currentSelection == 3)
         {
-            SelectionIndicator.transform.localPosition = new Vector3(-100, -60, 0);
-            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-100, -60, 0);
-            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-100, -60, 0);
-            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-100, -60, 0);
-            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-100, -60, 0);
+            SelectionIndicator.transform.localPosition = new Vector3(-130, -60, 0);
+            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-130, -60, 0);
+            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-130, -60, 0);
+            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-130, -60, 0);
+            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-130, -60, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) & state == BattleState.PLAYERTURN)
+        if (Input.GetKeyDown(KeyCode.RightArrow) & state == BattleState.PLAYERTURN)
         {
             if (currentSelection == 0 && switcher == Switcher.Combat)
             {
@@ -1322,22 +1332,25 @@ public class BattleSystem : MonoBehaviour
                 switcher = Switcher.Combat;
                 
                 //switch the pannels
-                player1HUD.transform.localPosition = new Vector3(-409, 87, 0);
+              player1HUD.transform.localPosition = new Vector3(-409, 87, 0);
 
                 playerHUD.transform.localPosition = new Vector3(-1600, 0, 0);
                 player2HUD.transform.localPosition = new Vector3(-1600, 0, 0);
                 player3HUD.transform.localPosition = new Vector3(-1600, 0, 0);
 
                 //switching the characters               
-                playerPrefab1.transform.localPosition = new Vector3(-3, 1, -6);
+               playerPrefab1.transform.localPosition = new Vector3(-3, 1, -6);
 
-                playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab2.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab3.transform.localPosition = new Vector3(-20, 1, -6);
-
+               playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
+               playerPrefab2.transform.localPosition = new Vector3(-20, 1, -6);
+               playerPrefab3.transform.localPosition = new Vector3(-20, 1, -6);
+              
                 switchState = CharacterSwitch.Naiden;
                 charState = CharacterState.Naiden;
             }
+
+            
+
 
             if (currentSelection == 1 && switchState == CharacterSwitch.Aero && switcher == Switcher.Switch)
             {
@@ -1355,11 +1368,11 @@ public class BattleSystem : MonoBehaviour
                 player3HUD.transform.localPosition = new Vector3(-1600, 0, 0);
 
                 //switching the characters               
-                playerPrefab2.transform.localPosition = new Vector3(-3, 1, -6);
+                 playerPrefab2.transform.localPosition = new Vector3(-3, 1, -6);
 
-                playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab1.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab3.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab1.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab3.transform.localPosition = new Vector3(-20, 1, -6);
 
                 switchState = CharacterSwitch.Beta;
                 charState = CharacterState.Beta;
@@ -1374,18 +1387,18 @@ public class BattleSystem : MonoBehaviour
                 switcher = Switcher.Combat;
 
                 //switch the pannels
-                player3HUD.transform.localPosition = new Vector3(-409, 87, 0);
+               player3HUD.transform.localPosition = new Vector3(-409, 87, 0);
 
                 playerHUD.transform.localPosition = new Vector3(-1600, 0, 0);
                 player1HUD.transform.localPosition = new Vector3(-1600, 0, 0);
                 player2HUD.transform.localPosition = new Vector3(-1600, 0, 0);
 
                 //switching the characters               
-                playerPrefab3.transform.localPosition = new Vector3(-3, 1, -6);
+               playerPrefab3.transform.localPosition = new Vector3(-3, 1, -6);
 
-                playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab1.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab2.transform.localPosition = new Vector3(-20, 1, -6);
+               playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
+               playerPrefab1.transform.localPosition = new Vector3(-20, 1, -6);
+               playerPrefab2.transform.localPosition = new Vector3(-20, 1, -6);
 
                 switchState = CharacterSwitch.Frost;
                 charState = CharacterState.Frost;
@@ -1418,6 +1431,8 @@ public class BattleSystem : MonoBehaviour
                 switchState = CharacterSwitch.Aero;
                 charState = CharacterState.Aero;
             }
+            
+           
             if (currentSelection == 1 && switchState == CharacterSwitch.Naiden && switcher == Switcher.Switch)
             {
                 //SWITCH TO BETA CODE
@@ -1452,18 +1467,18 @@ public class BattleSystem : MonoBehaviour
                 switcher = Switcher.Combat;
 
                 //switch the pannels
-                player3HUD.transform.localPosition = new Vector3(-409, 87, 0);
+               player3HUD.transform.localPosition = new Vector3(-409, 87, 0);
 
                 playerHUD.transform.localPosition = new Vector3(-1600, 0, 0);
                 player1HUD.transform.localPosition = new Vector3(-1600, 0, 0);
                 player2HUD.transform.localPosition = new Vector3(-1600, 0, 0);
 
                 //switching the characters               
-                playerPrefab3.transform.localPosition = new Vector3(-3, 1, -6);
+                 playerPrefab3.transform.localPosition = new Vector3(-3, 1, -6);
 
-                playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab1.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab2.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab1.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab2.transform.localPosition = new Vector3(-20, 1, -6);
 
                 switchState = CharacterSwitch.Frost;
                 charState = CharacterState.Frost;
@@ -1540,9 +1555,9 @@ public class BattleSystem : MonoBehaviour
                 //switching the characters               
                 playerPrefab3.transform.localPosition = new Vector3(-3, 1, -6);
 
-                playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab1.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab2.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab1.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab2.transform.localPosition = new Vector3(-20, 1, -6);
 
                 switchState = CharacterSwitch.Frost;
                 charState = CharacterState.Frost;
@@ -1584,18 +1599,18 @@ public class BattleSystem : MonoBehaviour
                 switcher = Switcher.Combat;
 
                 //switch the pannels
-                player1HUD.transform.localPosition = new Vector3(-409, 87, 0);
+               player1HUD.transform.localPosition = new Vector3(-409, 87, 0);
 
                 playerHUD.transform.localPosition = new Vector3(-1600, 0, 0);
                 player2HUD.transform.localPosition = new Vector3(-1600, 0, 0);
                 player3HUD.transform.localPosition = new Vector3(-1600, 0, 0);
 
                 //switching the characters               
-                playerPrefab1.transform.localPosition = new Vector3(-3, 1, -6);
+               playerPrefab1.transform.localPosition = new Vector3(-3, 1, -6);
 
-                playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab2.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab3.transform.localPosition = new Vector3(-20, 1, -6);
+               playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
+               playerPrefab2.transform.localPosition = new Vector3(-20, 1, -6);
+               playerPrefab3.transform.localPosition = new Vector3(-20, 1, -6);
 
                 switchState = CharacterSwitch.Naiden;
                 charState = CharacterState.Naiden;
@@ -1618,9 +1633,9 @@ public class BattleSystem : MonoBehaviour
                 //switching the characters               
                 playerPrefab2.transform.localPosition = new Vector3(-3, 1, -6);
 
-                playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab1.transform.localPosition = new Vector3(-20, 1, -6);
-                playerPrefab3.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab1.transform.localPosition = new Vector3(-20, 1, -6);
+                 playerPrefab3.transform.localPosition = new Vector3(-20, 1, -6);
 
                 switchState = CharacterSwitch.Beta;
                 charState = CharacterState.Beta;
@@ -1628,8 +1643,7 @@ public class BattleSystem : MonoBehaviour
 
 
 
-            // Hide the panel
-            //gameObject.SetActive(false);
+           
 
 
         }

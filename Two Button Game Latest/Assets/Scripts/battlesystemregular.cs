@@ -1581,6 +1581,7 @@ public class battlesystemregular : MonoBehaviour
         crit = Random.Range(1.0f, 100.0f);
 
         
+
         this.playerPrefab3.GetComponent<SpriteRenderer>().sprite = frostidle;
 
         enemyshot.SetBool("enemyshot", true);
@@ -2164,6 +2165,17 @@ public class battlesystemregular : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            SceneManager.LoadScene(0);
+        }
+
+
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        playerHUD.SetHP(playerUnit.currentHP);
+        player1HUD.SetHP1(player1Unit.currentHP);
+        player2HUD.SetHP2(player2Unit.currentHP);
+        player3HUD.SetHP3(player3Unit.currentHP);
 
         if (armor > 0)
         {
@@ -2210,38 +2222,38 @@ public class battlesystemregular : MonoBehaviour
 
         if (currentSelection == 0)
         {
-            SelectionIndicator.transform.localPosition = new Vector3(-100, 60, 0);
-            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-100, 60, 0);
-            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-100, 60, 0);
-            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-100, 60, 0);
-            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-100, 60, 0);
+            SelectionIndicator.transform.localPosition = new Vector3(-130, 60, 0);
+            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-130, 60, 0);
+            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-130, 60, 0);
+            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-130, 60, 0);
+            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-130, 60, 0);
         }
         if (currentSelection == 1)
         {
-            SelectionIndicator.transform.localPosition = new Vector3(-100, 20, 0);
-            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-100, 20, 0);
-            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-100, 20, 0);
-            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-100, 20, 0);
-            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-100, 20, 0);
+            SelectionIndicator.transform.localPosition = new Vector3(-130, 20, 0);
+            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-130, 20, 0);
+            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-130, 20, 0);
+            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-130, 20, 0);
+            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-130, 20, 0);
         }
         if (currentSelection == 2)
         {
-            SelectionIndicator.transform.localPosition = new Vector3(-100, -20, 0);
-            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-100, -20, 0);
-            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-100, -20, 0);
-            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-100, -20, 0);
-            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-100, -20, 0);
+            SelectionIndicator.transform.localPosition = new Vector3(-130, -20, 0);
+            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-130, -20, 0);
+            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-130, -20, 0);
+            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-130, -20, 0);
+            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-130, -20, 0);
         }
         if (currentSelection == 3)
         {
-            SelectionIndicator.transform.localPosition = new Vector3(-100, -60, 0);
-            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-100, -60, 0);
-            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-100, -60, 0);
-            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-100, -60, 0);
-            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-100, -60, 0);
+            SelectionIndicator.transform.localPosition = new Vector3(-130, -60, 0);
+            ChangeFromAeroIndicator.transform.localPosition = new Vector3(-130, -60, 0);
+            ChangeFromNaidenIndicator.transform.localPosition = new Vector3(-130, -60, 0);
+            ChangeFromBetaIndicator.transform.localPosition = new Vector3(-130, -60, 0);
+            ChangeFromFrostIndicator.transform.localPosition = new Vector3(-130, -60, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) & state == BattleState.PLAYERTURN)
+        if (Input.GetKeyDown(KeyCode.RightArrow) & state == BattleState.PLAYERTURN)
         {
             if (currentSelection == 0 && switcher == Switcher.Combat)
             {
