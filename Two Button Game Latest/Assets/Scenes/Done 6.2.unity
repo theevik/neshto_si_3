@@ -2923,7 +2923,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450938647}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2eb93fa66677c6440a6e68cc76041df9, type: 2}
   m_CullingMode: 0
@@ -2942,7 +2942,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450938647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.89, y: 1.42, z: -6}
+  m_LocalPosition: {x: -2.281, y: 1.42, z: -6}
   m_LocalScale: {x: 0.31596485, y: 0.31596485, z: 0.31596485}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3726,7 +3726,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4747767801675724364, guid: d3a58483f29c6534e81881d9745f3249,
     type: 3}
   dialogueText: {fileID: 1587013177}
-  subs1: {fileID: 0}
+  shtitche: {fileID: 0}
   playerHUD: {fileID: 1786087790}
   player1HUD: {fileID: 360766810}
   player2HUD: {fileID: 276770105}
@@ -3754,6 +3754,12 @@ MonoBehaviour:
   critChance: 30
   frozen: 0
   armor: 0
+  aeroshot: {fileID: 0}
+  naidenshot: {fileID: 0}
+  betashott: {fileID: 0}
+  frostshot: {fileID: 0}
+  batkashot: {fileID: 0}
+  naidenspecial: {fileID: 0}
 --- !u!4 &575033212
 Transform:
   m_ObjectHideFlags: 0
@@ -5382,7 +5388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877077612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.014, y: 1.537, z: -6}
+  m_LocalPosition: {x: -3.4049997, y: 1.537, z: -6}
   m_LocalScale: {x: 0.32744682, y: 0.32744682, z: 0.32744682}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5396,7 +5402,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877077612}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 553cfd1306ccb8146b7b598dfee5572e, type: 2}
   m_CullingMode: 0
@@ -8952,7 +8958,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000869036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fa2e9a43e81114c48b53c202edecff90, type: 2}
   m_CullingMode: 0
@@ -8971,7 +8977,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000869036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.91, y: 1.31, z: -6}
+  m_LocalPosition: {x: -0.30099982, y: 1.31, z: -6}
   m_LocalScale: {x: 0.27441376, y: 0.27441376, z: 0.27441376}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15498,7 +15504,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035816349}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 837a1dd502f66b74da3898c1075c880d, type: 2}
   m_CullingMode: 0
@@ -15517,7 +15523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035816349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.07, y: 1.14, z: -6}
+  m_LocalPosition: {x: -1.4609997, y: 1.14, z: -6}
   m_LocalScale: {x: 0.26574612, y: 0.26697668, z: 0.10271095}
   m_Children: []
   m_Father: {fileID: 0}

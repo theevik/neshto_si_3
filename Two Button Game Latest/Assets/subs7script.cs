@@ -174,6 +174,7 @@ public class subs7script : MonoBehaviour
         subs1.GetComponent<Text>().text = "Ik heb wel een idee...";
         subs2.GetComponent<Text>().text = "I might have an idea.";
         yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 
